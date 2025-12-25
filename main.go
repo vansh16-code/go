@@ -45,4 +45,5 @@ func main() {
 	structDemo()
 	goroutineDemo()
 	channelDemo()
+	bufferedChannelDemo()
 }
