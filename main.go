@@ -43,4 +43,6 @@ func main() {
 	fmt.Println(result)
 	MapDemo()
 	structDemo()
+	goroutineDemo()
+	channelDemo()
 }
