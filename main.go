@@ -35,11 +35,12 @@ func main() {
 	changeSlice(a[:])
 	fmt.Println(a)
 
-	result, err := divide(10, 0)
+	result, err := divide(10, 2)
 	if err != nil {
 		fmt.Println("Error:", err)
 		return
 	}
 	fmt.Println(result)
 	MapDemo()
+	structDemo()
 }
