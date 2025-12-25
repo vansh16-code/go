@@ -46,4 +46,5 @@ func main() {
 	goroutineDemo()
 	channelDemo()
 	bufferedChannelDemo()
+	WaitGroupDemo()
 }
