@@ -16,7 +16,7 @@ func channelDemo() {
 	fmt.Println(msg)
 }
 
-func bufferedChannelDemo(){
+func bufferedChannelDemo(){ // buffred channels are like queues and follows FIFO (First in first Out)
 	
 	jobs := make(chan int , 3) //buffer capacity = 3
 	jobs <- 1
