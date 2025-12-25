@@ -1,32 +1,34 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
 
+)
 
 type Product struct {
-	ID    int    `json:"id"` // struct tag : `json:"id"`
-	Name  string `json:"name"`
-	Price int    `json:"price"`
+	ID    int
+	Name  string
+	Price int
 }
 
-
-func updatePrice(p *Product, newPrice int) {
+// METHOD
+func (p *Product) UpdatePrice(newPrice int) {
 	p.Price = newPrice
 }
 
 
+func(p Product) Print(){
+	fmt.Println("Product:" , p.Name ,"-" , p.Price)
+}
+
 func structDemo() {
+	product := Product{ID: 1, Name: "Laptop", Price: 50000}
 
-	product := Product{
-		ID:    1,
-		Name:  "Laptop",
-		Price: 50000,
-	}
+	fmt.Println("Before:", product)
 
-	fmt.Println("Before update:", product)
+	product.UpdatePrice(60000)
 
-	// Update price using pointer
-	updatePrice(&product, 60000)
+	fmt.Println("After:", product)
 
-	fmt.Println("After update:", product)
+	product.Print()
 }
